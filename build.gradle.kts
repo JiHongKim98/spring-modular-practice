@@ -29,9 +29,14 @@ subprojects {
     dependencies {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-        testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+        testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        testImplementation("io.kotest:kotest-runner-junit5-jvm:${property("kotestVersion")}")
+        testImplementation("io.kotest:kotest-framework-datatest:${property("kotestVersion")}")
+        testImplementation("io.kotest:kotest-assertions-core:${property("kotestVersion")}")
+        testImplementation("io.kotest.extensions:kotest-extensions-spring:${property("kotestExtensionsVersion")}")
+        testImplementation("io.mockk:mockk:${property("mockkVersion")}")
     }
 
     kotlin {
