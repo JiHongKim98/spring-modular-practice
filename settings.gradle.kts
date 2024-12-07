@@ -10,6 +10,7 @@ include(
 
     // support module
     "support:logging",
+    "support:metric",
 )
 
 pluginManagement {
