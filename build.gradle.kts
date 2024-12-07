@@ -27,8 +27,9 @@ subprojects {
     apply(plugin = "io.spring.dependency-management")
 
     dependencies {
-        implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
+        implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+        implementation("io.github.oshai:kotlin-logging-jvm:${property("kotlinLoggingVersion")}")
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
         testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
